@@ -23,6 +23,6 @@ def caesar_cipher(text, key)
 end
     text = params['text']
     key = params['key']
-    cipher = caesar_cipher(text,key.to_i)
+    cipher = caesar_cipher(text.to_s, key.to_i)
     erb :index, :locals => {:text => text, :key => key, :cipher => cipher}
     end 
